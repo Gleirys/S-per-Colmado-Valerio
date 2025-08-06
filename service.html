@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Súper Colmado Valerio</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+   
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <h1 class="m-0 display-4 text-primary text-uppercase">Col.Valerio</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                             <a href="index.html" class="nav-item nav-link" onmouseover="this.style.color='#238F23'"onmouseout="this.style.color=''">Inicio</a>
+                            <a href="about.html" class="nav-item nav-link " onmouseover="this.style.color='#238F23'"onmouseout="this.style.color=''">Sobre nosotros</a>
+                            <a href="service.html" class="nav-item nav-link active" style="color: #238F23 !important;"onmouseover="this.style.color='#238F23'"onmouseout="this.style.color='#238F23'">Productos</a>
+                            <a href="contact.html" class="nav-item nav-link" onmouseover="this.style.color='#238F23'"onmouseout="this.style.color=''">Contáctanos</a>
+                            <a href="team.html" class="nav-item nav-link" onmouseover="this.style.color='#238F23'"onmouseout="this.style.color=''">Danos tu opinión</a>
+                                </div>
+                            </div>
+                          
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-page-header" style="margin-bottom: 90px;">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+                <h3 class="display-3 text-white text-uppercase">Productos</h3>
+                <div class="d-inline-flex text-white">
+                    <a class="text-white mb-2" href="index.html"></i>Inicio</a>
+                      <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <a class="text-white mb-2" href="service.html"></i>Productos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+ <style>
+  
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 30px;
+    }
+
+    /* Botones de categorías con imagen de fondo */
+    .contenedor-botones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .boton-categoria {
+      background-color: #4CAF50;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      padding: 20px 30px;
+      width: 200px;
+      height: 100px;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s, background-color 0.3s;
+      position: relative;
+    }
+
+    .boton-categoria::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.3); /* Oscurecer fondo para ver texto mejor */
+      border-radius: 12px;
+      z-index: 1;
+    }
+
+    .boton-categoria span {
+      position: relative;
+      z-index: 2;
+    }
+
+    .boton-categoria:hover {
+      background-color: #388e3c;
+      transform: scale(1.05);
+    }
+
+    /* Galería de productos */
+    #galeria {
+      display: none;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    #galeria h2 {
+      color: #2e7d32;
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #4CAF50;
+      padding-bottom: 10px;
+    }
+    .imagenes-categoria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .imagen-producto {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 200px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .imagen-producto:hover {
+      transform: translateY(-5px);
+    }
+    .imagen-producto img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .imagen-producto p {
+      padding: 10px;
+      margin: 0;
+      font-weight: bold;
+      color: #333;
+    }
+
+ /* Botones de categorías con imagen arriba y texto abajo */
+
+/* Contenedor de     botones */
+.contenedor-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* Estilo de cada botón */
+.boton-categoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #48e02dcb; 
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 20px;
+  width: 250px;
+  min-height: 250px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.boton-categoria:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen en el botón */
+.boton-categoria img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  opacity: 0.95;
+  
+}
+
+/* Texto debajo de la imagen */
+.boton-categoria span {
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+  </style>
+  
+</head>
+<body>
+  <h1>Bienvenido a los productos del Super Colmado Valerio</h1>
+
+  <!-- Botones de categorías con imágenes de fondo -->
+ <div class="contenedor-botones">
+
+  <button class="boton-categoria" onclick="mostrarGaleria('Granos y cereales')">
+    <img src="img/granos-cereales.png" alt="Granos y cereales">
+    <span>Granos y cereales</span>
+ </button>
+
+  <button class="boton-categoria" onclick="mostrarGaleria('bebidas')">
+    <img src="img/bebidas-icono.png" alt="Bebidas">
+    <span>Bebidas</span>
+  </button>
+
+  <button class="boton-categoria" onclick="mostrarGaleria('lacteos')">
+    <img src="img/lacteos-icono.png" alt="Lácteos">
+    <span>Lácteos</span>
+  </button>
+
+  <button class="boton-categoria" onclick="mostrarGaleria('enlatados y embutidos')">
+    <img src="img/enlatados-icono.png" alt="Enlatados y Embutidos">
+    <span>Enlatados-Embutidos</span>
+  </button>
+
+  <button class="boton-categoria" onclick="mostrarGaleria('snacks')">
+    <img src="img/snaks-icono.png" alt="Snacks">
+    <span>Snacks</span>
+  </button>
+
+  <button class="boton-categoria" onclick="mostrarGaleria('ferreteria')">
+    <img src="img/ferreteria-icono.png" alt="Ferretería">
+    <span>Ferretería</span>
+  </button>
+
+  <button class="boton-categoria" onclick="mostrarGaleria('limpieza')">
+    <img src="img/limpieza-icono.png" alt="Limpieza">
+    <span>Limpieza</span>
+  </button>
+
+  <button class="boton-categoria" onclick="mostrarGaleria('alimentos frescos')">
+    <img src="img/alimentos-icono.png" alt="Alimentos Frescos">
+    <span>Alimentos Frescos</span>
+  </button>
+
+  <button class="boton-categoria" onclick="mostrarGaleria('pastas')">
+    <img src="img/pastas-icono.png" alt="Pastas">
+    <span>Pastas</span>
+  </button>
+
+  <button class="boton-categoria" onclick="mostrarGaleria('manualidades')">
+    <img src="img/manualidades-icono.png" alt="Manualidades">
+    <span>Manualidades</span>
+  </button>
+
+  <button class="boton-categoria" onclick="mostrarGaleria('utensilios')">
+    <img src="img/utensilios-icono.png" alt="Utensilios">
+    <span>Utensilios</span>
+  </button>
+</div>
+
+  <!-- Botón para regresar -->
+  <button id="btn-regresar" style="display: none; margin: 20px auto; padding: 10px 20px; font-size: 18px; background-color: #238F23; color: white; border: none; border-radius: 8px; cursor: pointer;" onclick="ocultarGaleria()">
+  ← Volver a categorías
+</button>
+
+  <!-- Galería de productos -->
+  <div id="galeria">
+    <h2 id="titulo-galeria"></h2>
+    <div class="imagenes-categoria" id="contenedor-imagenes">
+      <!-- Las imágenes se cargarán aquí con JavaScript -->
+    </div>
+  </div>
+
+  <script>
+    // Base de datos de productos por categoría (CORREGIDA)
+    const productos = {
+      "Granos y cereales": [
+        { nombre: "Arroz", img: "img/arroz.png" },
+        { nombre: "Arroz Campos", img: "img/campos.png" },
+        { nombre: "Habichuela", img: "img/habicuelas.png" },
+        { nombre: "Azúcar", img: "img/azucar.png" },
+        { nombre: "Harina de maiz", img: "img/harinamaiz.png" },
+        { nombre: "Harina de trigo", img: "img/harinatrigo.png" },
+        { nombre: "Café Santo domingo", img: "img/cafestodgo.png" },
+        { nombre: "Café Cibao", img: "img/cafecibao.png" },
+        { nombre: "Café Pilon", img: "img/cafepilon.png" },
+        { nombre: "Café Supremo", img: "img/cafesupremo.png" },
+        { nombre: "Avena instantánea", img: "img/avenainstantanea.png" },
+        { nombre: "Maizena", img: "img/maizena.png" },
+        { nombre: "Sal", img: "img/sal.png" },
+        { nombre: "Oregano", img: "img/oregano.png" },
+        { nombre: "Aceite", img: "img/aceite.png" },
+        { nombre: "Cazabe", img: "img/cazabe.webp" }
+      ],
+      "bebidas": [
+        { nombre: "Coca Cola", img: "img/coca-cola.png" },
+        { nombre: "Agua Dasani", img: "img/aguadasani.png" },
+        { nombre: "Agua saborizada", img: "img/aguasaborizada.png" },
+        { nombre: "Agua Rachell", img: "img/aguarachell.png" },
+        { nombre: "Agua orbis", img: "img/aguaorbis.png" },
+        { nombre: "Jugo Santal", img: "img/jugosantal.png" },
+        { nombre: "Jugo santal pequeño", img: "img/jugossantalpequeño.png" },
+        { nombre: "Jugo Motts", img: "img/jugomotts.png" },
+        { nombre: "Jugo Camberry", img: "img/jugocranberry.png" },
+        { nombre: "Jugo frutop", img: "img/jugofrutop.png" },
+        { nombre: "Jugo petit", img: "img/jugopetit.png" },
+        { nombre: "Malta morena", img: "img/malta.png" },
+        { nombre: "Malta Alemana", img: "img/malta alemana.png" },
+        { nombre: "Refresco kola real", img: "img/refrescokolareal.png" },
+        { nombre: "Refresco fanta", img: "img/refrescofanta.png" },
+        { nombre: "Ron añejo", img: "img/ronañejo.png" },
+        { nombre: "Ron Mack Albert", img: "img/ronalbert.png" },
+        { nombre: "Ron Jhonnie Walker", img: "img/ronredlabel.png" },
+        { nombre: "Ron XV", img: "img/ronxv.png" },
+        { nombre: "Ron Barcelo", img: "img/ronbarcelo.png" },
+        { nombre: "Ron extra viejo", img: "img/ronviejo.png" },
+        { nombre: "Ron Black Racing", img: "img/black.png" },
+        { nombre: "Ron Doble reserva", img: "img/brugaldoblereserva.png" },
+        { nombre: "Ron King's Label", img: "img/king.png" },
+        { nombre: "Carlo Rossi Rosado", img: "img/caolorossirosado.png" },
+        { nombre: "Carlo Rossi Negro", img: "img/caolorossinegro.png" },
+        { nombre: "Carlo Rossi Verde", img: "img/carlorossiverde.png" },
+        { nombre: "Vino a la Fuerza", img: "img/vinolafuerza.png" },
+        { nombre: "Vino campeon", img: "img/vinocampeon.png" },
+        { nombre: "Gatorade", img: "img/gatore.png" },
+        { nombre: "Vive 100", img: "img/vive100.png" },
+        { nombre: "Cidra", img: "img/cidra.png" },
+        { nombre: "Cerveza Presidente", img: "img/cerveza.png" }
+      ],
+      "lacteos": [
+        { nombre: "Leche", img: "img/leche.png" },
+        { nombre: "Milex", img: "img/milex.png" },
+        { nombre: "Leche la granja", img: "img/lagranja.png" },
+        { nombre: "Parmalat", img: "img/parmalat.png" },
+        { nombre: "Parmalat de chocolate", img: "img/parmalatchocolate.png" },
+        { nombre: "Nido", img: "img/nido.png" },
+        { nombre: "Kanny", img: "img/kanny.png" },
+        { nombre: "Nutra", img: "img/nutra.png" },
+        { nombre: "Milex en polvo", img: "img/milexpolvo.png" },
+        { nombre: "Leche Rica descremada", img: "img/lechedescremada.png" },
+        { nombre: "Mantequilla manicera", img: "img/manicera.png" },
+        { nombre: "Yogurt", img: "img/yogurt.png" },
+        { nombre: "Queso de hoja", img: "img/quesodehoja.png" },
+        { nombre: "Queso Geo", img: "img/quesogeo.png" },
+        { nombre: "Queso de freir", img: "img/freir.png" },
+        { nombre: "Queso quedar", img: "img/quesoquedar.png" }
+      ],
+      "enlatados y embutidos": [
+        { nombre: "Atún", img: "img/atun.png" },
+        { nombre: "Paco fish", img: "img/paco.png" },
+        { nombre: "Leche Condensada", img: "img/condensada.png" },
+        { nombre: "Leche Carnation", img: "img/evaporada.png" },
+        { nombre: "Flan", img: "img/flan.png" },
+        { nombre: "Leche de coco", img: "img/lechedecoco.png" },
+        { nombre: "Crema de leche", img: "img/cremadeleche.png" },
+        { nombre: "Garbanzos", img: "img/garbanzos.png" },
+        { nombre: "Vegetales Mixtos", img: "img/mixtas.png" },
+        { nombre: "Maíz", img: "img/maiz.png" },
+        { nombre: "Habichuela roja", img: "img/habicuelaroja.png" },
+        { nombre: "Habichuela pintas", img: "img/habichuelapintas.png" },
+        { nombre: "Habichuela blanca", img: "img/habichuelasblancas.png" },
+        { nombre: "Habichuela negra", img: "img/habichuelasnegras.png" },
+        { nombre: "Petit pois", img: "img/petitpois.png" },
+        { nombre: "Gandules verdes", img: "img/gandules.png" },
+        { nombre: "Salsa", img: "img/salsa.png" },
+        { nombre: "Salchichas", img: "img/salchicas.png" },
+        { nombre: "Mayonesa", img: "img/mayonesa.png" },
+        { nombre: "Ketchup", img: "img/cachu.png" },
+        { nombre: "Cremora", img: "img/cremora.png" },
+        { nombre: "Ajo", img: "img/ajo.png" },
+        { nombre: "Sazón Ranchero", img: "img/ranchero.png" },
+        { nombre: "Ricompleto", img: "img/ricompleto.png" },
+        { nombre: "Maggi", img: "img/sazon-maggi.webp" },
+        { nombre: "Adobo", img: "img/goyaadobo.webp" },
+        { nombre: "Aderezo", img: "img/adereso.webp" },
+        { nombre: "Mantequilla de maní", img: "img/mani.webp" },
+        { nombre: "Hersheys", img: "img/hersheys.webp" },
+        { nombre: "Vinagre de manzana", img: "img/vinagre.webp" },
+        { nombre: "Cocoa", img: "img/cocoa.webp" },
+        { nombre: "Nesquik", img: "img/nesquik.webp" },
+        { nombre: "Salsa China", img: "img/salsa-china.jpeg" },
+        { nombre: "Salsa Picante", img: "img/salsapicante.jpg" },
+        { nombre: "Aceite de oliva", img: "img/aceite-figaro.jpeg" },
+        { nombre: "Chuleta", img: "img/chuleta.png" },
+        { nombre: "Longaniza", img: "img/longaniza.png" },
+        { nombre: "Salami", img: "img/salami.png" }
+      ],
+      "alimentos frescos": [
+        { nombre: "Yuca", img: "img/yuca.png" },
+        { nombre: "Platanos", img: "img/platanos.png" },
+        { nombre: "Papa", img: "img/papa.png" },
+        { nombre: "Ajo", img: "img/ajoentero.png" },
+        { nombre: "Cebolla", img: "img/cebolla.png" },
+        { nombre: "Huevos", img: "img/huevos.png" },
+        { nombre: "Ají", img: "img/aji.png" },
+        { nombre: "Recaito", img: "img/recaito.png" },
+        { nombre: "Guineos", img: "img/guineos.png" }
+      ],
+      "snacks": [
+        { nombre: "Lay's", img: "img/lay.webp" },
+        { nombre: "Hojuelitas", img: "img/hojuelitas.webp" },
+        { nombre: "Cheetos", img: "img/cheetos.jpg" },
+        { nombre: "Doritos", img: "img/doritos.webp" },
+        { nombre: "Ruffles", img: "img/ruffle.webp" },
+        { nombre: "Platanitos", img: "img/platanitos.webp" },
+        { nombre: "Chicharron", img: "img/chicharron.webp" },
+        { nombre: "Palomitas", img: "img/palomitas.jpeg" },
+        { nombre: "Cappy", img: "img/cappy.webp" },
+        { nombre: "Taqueritos", img: "img/taqueritos.webp" },
+        { nombre: "Bolones", img: "img/bolon.webp" },
+        { nombre: "Mentas", img: "img/mentashalls.webp" },
+        { nombre: "Ritz de Queso", img: "img/OIrit.png" },
+        { nombre: "Oreo", img: "img/oreo.png" },
+        { nombre: "Galletas de pan", img: "img/galletas.png" },
+         { nombre: "Caballitos", img: "img/caballito.jpg" },
+          { nombre: "Pan", img: "img/pan.jpg" },
+        { nombre: "Donas", img: "img/donas.png" },
+        { nombre: "Bizcoquito", img: "img/mofin.png" },
+        { nombre: "Milky way", img: "img/milky.png" },
+        { nombre: "Hersheys", img: "img/hersheys.png" },
+        { nombre: "Gelatina", img: "img/oli.png" },
+        { nombre: "Pasas", img: "img/pasa.png" },
+        { nombre: "Compota", img: "img/compota.png" },
+        { nombre: "Galletas aviva", img: "img/aviva.png" },
+        { nombre: "Tridents", img: "img/chicle.png" }
+      ],
+      "ferreteria": [
+        { nombre: "Candado", img: "img/candado.png" },
+        { nombre: "Porta Candado", img: "img/portacandado.png" },
+        { nombre: "Pilas", img: "img/baterias.png" },
+        { nombre: "Bombillo", img: "img/bombillo.png" },
+        { nombre: "Regleta", img: "img/regleta.png" },
+        { nombre: "Lima", img: "img/lima.png" },
+        { nombre: "Codo", img: "img/codo.png" },
+        { nombre: "Llave de Paso", img: "img/llavedepaso.png" },
+        { nombre: "Teipe cinta negra", img: "img/teipi.png" },
+        { nombre: "Clavos", img: "img/clavos.png" },
+        { nombre: "Regulador de Gas", img: "img/regulador.png" },
+        { nombre: "Linterna", img: "img/linterna.png" }
+      ],
+      "pastas": [
+        { nombre: "Espaguetti", img: "img/princesa.png" },
+        { nombre: "Macarrones", img: "img/macarron.png" },
+        { nombre: "Espirales", img: "img/espiral.png" },
+        { nombre: "Fideos", img: "img/fideos.png" },
+        { nombre: "Coditos", img: "img/coditos.png" }
+      ],
+      "manualidades": [
+        { nombre: "Aguja", img: "img/agujas.png" },
+        { nombre: "Hilo", img: "img/hilo.png" },
+        { nombre: "Hojas", img: "img/hojas.png" },
+        { nombre: "Folder", img: "img/folder.png" },
+        { nombre: "Cinta", img: "img/cinta.png" },
+        { nombre: "Hega", img: "img/hega.png" },
+        { nombre: "Silicon", img: "img/silicon.png" },
+        { nombre: "Sacapunta", img: "img/sacapunta.png" },
+        { nombre: "Borra", img: "img/borra.png" },
+        { nombre: "Lápiz", img: "img/lapiz.png" },
+        { nombre: "Lapicero", img: "img/lapicero.png" },
+        { nombre: "Barajas", img: "img/barajas.png" },
+        { nombre: "Cuadernos", img: "img/cuaderno.png" }
+      ],
+      "utensilios": [
+        { nombre: "Greca", img: "img/greca.png" },
+        { nombre: "Plato", img: "img/platos.png" },
+        { nombre: "Cuchara", img: "img/cuchara.png" },
+        { nombre: "Tenedor", img: "img/tenedor.png" },
+        { nombre: "Vasos", img: "img/c.jpeg" },
+        { nombre: "Papel aluminio", img: "img/papelaluminio.png" },
+        { nombre: "Tasas", img: "img/tasas.png" },
+        { nombre: "Velon", img: "img/velon.png" },
+        { nombre: "Vic vaporu", img: "img/vaporub.png" },
+        { nombre: "Medidor de leche", img: "img/medidor.png" },
+        { nombre: "Biberon", img: "img/biberon.png" },
+        { nombre: "Toallitas húmedas", img: "img/toallitas.png" },
+        { nombre: "Gomitas", img: "img/gomitas.png" }
+      ],
+      "limpieza": [
+        { nombre: "Cloro", img: "img/cloro.png" },
+        { nombre: "Fabuloso", img: "img/fabuloso.png" },
+        { nombre: "Rasuradora", img: "img/rasuradora.png" },
+        { nombre: "Pantene", img: "img/pantene.png" },
+        { nombre: "Head Shoulders", img: "img/shampoo.png" },
+        { nombre: "Isopos", img: "img/isopos.png" },
+        { nombre: "Ace Brillante", img: "img/ace.png" },
+        { nombre: "Ace Fab", img: "img/acefab.png" },
+        { nombre: "Palillos", img: "img/palillos.png" },
+        { nombre: "Guantes", img: "img/guantes.png" },
+        { nombre: "Brillo", img: "img/brillo.png" },
+        { nombre: "Cepillo Dental", img: "img/cepillo.png" },
+        { nombre: "Toallas Sanitarias", img: "img/toallas.png" },
+        { nombre: "Axion", img: "img/axion.png" },
+        { nombre: "Downy", img: "img/downy.png" },
+        { nombre: "Suavitel", img: "img/suavitel.png" },
+        { nombre: "Protex", img: "img/protex.png" },
+        { nombre: "Nitido", img: "img/nitido.png" },
+        { nombre: "Huggies", img: "img/pampers.png" },
+        { nombre: "Colgate", img: "img/colhgate.png" },
+        { nombre: "Ambientador", img: "img/ambientador.png" },
+        { nombre: "Vaigon", img: "img/vaigon.png" },
+        { nombre: "Rexona", img: "img/rexona.png" },
+        { nombre: "Lady Speed stick", img: "img/lady.png" },
+        { nombre: "Speed Stick", img: "img/speedstick.png" },
+        { nombre: "Esponja", img: "img/esponja.png" },
+        { nombre: "Jabón Río", img: "img/rio.png" },
+        { nombre: "Bola Azul", img: "img/bolaazul.png" },
+        { nombre: "Rayito", img: "img/rayito.png" },
+        { nombre: "Papel Sanitario", img: "img/papel.png" }
+      ]
+    };
+
+    function mostrarGaleria(categoria) {
+      const galeria = document.getElementById("galeria");
+      const titulo = document.getElementById("titulo-galeria");
+      const contenedor = document.getElementById("contenedor-imagenes");
+      const btnRegresar = document.getElementById("btn-regresar");
+
+      contenedor.innerHTML = "";
+
+      // Corregir capitalización del título
+      const tituloFormateado = categoria
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+        .join(' ');
+
+      titulo.textContent = tituloFormateado;
+
+      const productosCategoria = productos[categoria];
+      if (!productosCategoria) {
+        contenedor.innerHTML = "<p>Productos no encontrados.</p>";
+        return;
+      }
+
+      productosCategoria.forEach(prod => {
+        if (!prod.img || prod.img === "img/" || !prod.nombre) return; // Omitir elementos vacíos
+        const div = document.createElement("div");
+        div.className = "imagen-producto";
+        div.innerHTML = `
+          <img src="${prod.img}" alt="${prod.nombre || 'Producto'}">
+          <p>${prod.nombre || 'Sin nombre'}</p>
+        `;
+        contenedor.appendChild(div);
+      });
+
+      galeria.style.display = "block";
+      btnRegresar.style.display = "inline-block";
+      document.querySelector(".contenedor-botones").style.display = "none";
+    }
+
+    function ocultarGaleria() {
+      document.getElementById("galeria").style.display = "none";
+      document.getElementById("btn-regresar").style.display = "none";
+      document.querySelector(".contenedor-botones").style.display = "flex";
+    }
+  </script>
+
+    
+     <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5" >
+            <!-- cajita de los cuadritos  -->
+
+        <div class="row mt-5" >
+
+            <!-- cuadrito de ubicacion -->
+            <div class="col-lg-4" style="background-color: rgb(35,143,35); border: 1px solid black;">
+                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                    <i class="fa fa-2x fa-map-marker-alt text-secundary"></i>
+                    <div class="ml-3">
+                        <h5 class="text-white">Ubicacion</h5>
+                        <p class="m-0">Arroyo Blanco al medio, Santiago Rodriguez</p>
+                    </div>
+                </div>
+            </div>
+                        <!-- cuadrito de email -->
+            <div class="col-lg-4" style="background-color: rgb(35, 143, 35); border: 1px solid black;">
+                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                    <i class="fa fa-2x fa-envelope-open text-secundary"></i>
+                    <div class="ml-3">
+                        <h5 class="text-white">Email</h5>
+                        <p class="m-0">colmadovalerio217@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+           
+                        <!-- cuadrito de telefono -->
+
+           <div class="col-lg-4" style="background-color: rgb(35, 143, 35); border: 1px solid black;">
+                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                    <i class="fa fa-2x fa-phone-alt text-secundary"></i>
+                    <div class="ml-3">
+                        <h5 class="text-white">Teléfono</h5>
+                        <p class="m-0"> 809-721-9555</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row pt-5" >
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="index.html" class="navbar-brand">
+                   
+        <!-- O verde más claro -->
+        <h1 class="m-0 mt-n2 display-4 text-uppercase" style="color: #4CAF50;">Súper colmado Valerio</h1>
+        
+        
+    </a>
+       
+                    
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold mb-4" style="color: rgb(35,143,35);">Popular Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                   <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+<a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Sobre nosotros</a>
+<a class="text-white mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Productos</a>
+<a class="text-white mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contáctanos</a>
+<a class="text-white" href="team.html"><i class="fa fa-angle-right mr-2"></i>Danos tu opinion</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold mb-4" style="color: rgb(35,143,35);">Enlaces rápidos</h4>
+                <div class="d-flex flex-column justify-content-start">
+      
+                    <a class="text-white mb-2" href="ayuda.html"><i class="fa fa-angle-right mr-2"></i>Ayuda</a>
+                    
+                </div>
+            </div>
+
+        </div>
+      
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
